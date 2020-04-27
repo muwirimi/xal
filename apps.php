@@ -33,9 +33,7 @@
             <?php
             foreach (glob("*") as $filename)
             	{
-            		if ($filename == "xampp" OR $filename == "webalizer" OR $filename == "favicon.ico"){} 
-            			else
-            				{
+            		 
             					if (file_exists($filename."/app_info.php"))
             						{ 
             							require ($filename."/app_info.php");
@@ -43,8 +41,7 @@
             							<button onclick="return confirm('Open <?php echo ucwords($filename); ?>\n<?php echo $desc; ?>');window.location='/<?php echo $filename; ?>';" title="<?php echo $title; ?>"><?php echo ucwords($title); ?></button>
             							&nbsp;
             							<?php
-            						}
-            				}
+            						} 
             	} 
             ?>
          </div>
